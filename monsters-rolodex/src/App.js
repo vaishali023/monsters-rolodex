@@ -35,6 +35,7 @@ render() {
         return ( <div key = {monster.id}>
           <h1>{monster.name}</h1>
            </div>
+           
         );
         
       })
