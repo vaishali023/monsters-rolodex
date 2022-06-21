@@ -30,6 +30,7 @@ componentDidMount() {
 render() {
   return (
     <div className="App">
+     <input className = 'Search-box' type= 'search' placeholder='search monsters'/>
     {
       this.state.monsters.map((monster) => {
         return ( <div key = {monster.id}>
