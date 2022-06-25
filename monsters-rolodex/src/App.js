@@ -34,6 +34,7 @@ render() {
     return monster.name.toLocaleLowerCase().includes(this.state.searchField);
 });
 
+
   return (
     <div className="App">
      <input 
