@@ -27,9 +27,19 @@ componentDidMount() {
     ));
 }
 
+onSearchChange = (event) => {
+  console.log(event.target.value);
+  const searchField = event.target.value.toLocaleLowerCase();
+ 
+  this.setState( () => {
+    return { searchField};
+  });
+}
+
 render() {
 
   console.log('render');
+
   const filteredMonsters = this.state.monsters.filter((monster) => {
     return monster.name.toLocaleLowerCase().includes(this.state.searchField);
 });
@@ -43,14 +53,7 @@ render() {
       className = 'Search-box' 
      type= 'search'
       placeholder='search monsters'
-        onChange={(event) => {
-          console.log(event.target.value);
-          const searchField = event.target.value.toLocaleLowerCase();
-         
-          this.setState( () => {
-            return { searchField};
-          });
-        }}
+        onChange={this.onSearchChange}
       />
     {
       filteredMonsters.map((monster) => {
