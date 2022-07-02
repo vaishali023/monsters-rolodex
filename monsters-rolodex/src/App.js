@@ -48,7 +48,7 @@ render() {
   return (
     <div className="App">
      <input 
-      className = 'Search-box' 
+      className = 'monsters-search-box' 
      type= 'search'
       placeholder='search monsters'
         onChange={onSearchChange}
