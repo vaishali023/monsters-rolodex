@@ -3,11 +3,10 @@ import './card-list.styles.css';
 
 const CardList = ({monsters}) => (
     <div className="card-list">
-        {monsters.map((monster) => {             
-          return <Card monster={monster}/>;
+        {monsters.map((monster, idx) => {             
+          return <Card monster={monster} key={idx}/>;
        })}
      </div>
 );
-
 
 export default CardList;
