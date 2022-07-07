@@ -3,14 +3,10 @@ import CardList from './components/card-list/card-list.component';
 import SearchBox from './components/search-box/search-box.component';
 import './App.css';
 
-
-
 const App = () => {
   const [searchField, setSearchField] = useState('');
   const[monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilterMonsters] = useState(monsters);
-
-   console.log('render');
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -47,7 +43,7 @@ const App = () => {
       <CardList monsters = {filteredMonsters}/>
     </div>
   );
-}
+};
 
 
 // class App extends Component {
